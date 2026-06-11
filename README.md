@@ -1,3 +1,4 @@
+<img width="1347" height="876" alt="Captura de pantalla 2026-06-11 095527" src="https://github.com/user-attachments/assets/21eeddf0-19c8-4042-ad4c-9fdcb52dbd82" />
 # Diario Virtual
 
 Aplicación móvil desarrollada para registrar y organizar recuerdos, notas y experiencias personales de forma sencilla y accesible.
@@ -61,7 +62,8 @@ Muestra las notas registradas por el usuario.
 
 Permite visualizar la información completa de una nota y marcarla como completada.
 
-*Insertar aquí la captura del prototipo de Figma.*
+<img width="1347" height="876" alt="Captura de pantalla 2026-06-11 095527" src="https://github.com/user-attachments/assets/76840074-8c41-4b84-9013-a1c4bf1b2fc9" />
+
 
 ---
 
@@ -69,7 +71,8 @@ Permite visualizar la información completa de una nota y marcarla como completa
 
 ### Pantalla principal desarrollada en Android Studio
 
-*Insertar aquí la captura real de la aplicación.*
+<img width="549" height="887" alt="Captura de pantalla 2026-06-11 100429" src="https://github.com/user-attachments/assets/a1e11621-e503-4a3a-9df8-80cf400a317b" />
+
 
 ---
 
