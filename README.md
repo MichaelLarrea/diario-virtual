@@ -27,6 +27,9 @@ Muchas personas necesitan un espacio digital donde puedan guardar y organizar su
 * Navegación desde el login hacia la pantalla principal.
 * Limpieza del historial de navegación para evitar volver al login con el botón Atrás.
 
+## Captura de la aplicación
+<img width="494" height="788" alt="Captura de pantalla 2026-06-23 122500" src="https://github.com/user-attachments/assets/b9bcc846-dfb8-42a7-a7fa-106b74552061" />
+Pantalla de inicio de sesión de la aplicación Diario Virtual funcionando en el emulador.
 
 # Objetivo
 
