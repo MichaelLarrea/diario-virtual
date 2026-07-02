@@ -1,4 +1,5 @@
 <img width="1347" height="876" alt="Captura de pantalla 2026-06-11 095527" src="https://github.com/user-attachments/assets/21eeddf0-19c8-4042-ad4c-9fdcb52dbd82" />
+
 # Diario Virtual
 
 Aplicación móvil desarrollada para registrar y organizar recuerdos, notas y experiencias personales de forma sencilla y accesible.
@@ -28,14 +29,16 @@ Muchas personas necesitan un espacio digital donde puedan guardar y organizar su
 * Limpieza del historial de navegación para evitar volver al login con el botón Atrás.
 
 ## Captura de la aplicación
+
 <img width="494" height="788" alt="Captura de pantalla 2026-06-23 122500" src="https://github.com/user-attachments/assets/b9bcc846-dfb8-42a7-a7fa-106b74552061" />
+
 Pantalla de inicio de sesión de la aplicación Diario Virtual funcionando en el emulador.
 
 # Objetivo
 
 Desarrollar una aplicación móvil que permita registrar, visualizar y organizar notas y recuerdos personales mediante una interfaz sencilla e intuitiva.
 
----``
+---
 
 # Historias de Usuario (MVP)
 
@@ -84,7 +87,6 @@ Permite visualizar la información completa de una nota y marcarla como completa
 
 <img width="1347" height="876" alt="Captura de pantalla 2026-06-11 095527" src="https://github.com/user-attachments/assets/76840074-8c41-4b84-9013-a1c4bf1b2fc9" />
 
-
 ---
 
 # Capturas de la Aplicación
@@ -92,7 +94,6 @@ Permite visualizar la información completa de una nota y marcarla como completa
 ### Pantalla principal desarrollada en Android Studio
 
 <img width="549" height="887" alt="Captura de pantalla 2026-06-11 100429" src="https://github.com/user-attachments/assets/a1e11621-e503-4a3a-9df8-80cf400a317b" />
-
 
 ---
 
@@ -174,6 +175,95 @@ Repository
 DAO
    ↓
 Room Database
+```
+
+El **ViewModel** administra los datos utilizados por la interfaz y conserva la información durante los cambios de configuración.
+
+El **Repository** funciona como intermediario entre el ViewModel y el DAO.
+
+El **DAO** contiene las operaciones necesarias para crear, consultar, actualizar y eliminar notas.
+
+**Room Database** almacena la información de manera local en el dispositivo.
+
+Cuando se crea, edita o elimina una nota, LiveData informa el cambio y el RecyclerView actualiza automáticamente la lista.
+
+```text
+Room Database
+      ↓
+LiveData
+      ↓
+RecyclerView Adapter
+      ↓
+Lista actualizada
+```
+
+---
+
+# API REST utilizada
+
+La aplicación consume una API pública de frases aleatorias mediante Retrofit.
+
+Endpoint utilizado:
+
+```text
+https://dummyjson.com/quotes/random
+```
+
+La respuesta de la API contiene los siguientes campos:
+
+```text
+id
+quote
+author
+```
+
+Retrofit realiza la solicitud HTTP y Gson convierte la respuesta JSON en un objeto Kotlin.
+
+La aplicación maneja tres estados durante la consulta:
+
+* **Loading:** la información se encuentra cargando.
+* **Success:** la respuesta fue recibida correctamente.
+* **Error:** ocurrió un problema durante la solicitud.
+
+---
+
+# Notificaciones locales
+
+La aplicación utiliza WorkManager para programar recordatorios en segundo plano.
+
+La notificación puede consultar la información almacenada en Room y mostrar un mensaje relacionado con las notas del usuario.
+
+Si no existen notas, la aplicación puede invitar al usuario a crear su primera entrada. Si ya existen notas guardadas, puede recordarle que escriba una nueva experiencia o recuerdo.
+
+Ejemplo de notificación:
+
+```text
+MyVirtualDiary
+
+¿Cómo estuvo tu día?
+Escribe una nueva entrada en tu diario.
+```
+
+---
+
+# Cómo probar el CRUD
+
+1. Abrir el proyecto en Android Studio.
+2. Esperar a que finalice la sincronización de Gradle.
+3. Ejecutar la aplicación en un emulador o dispositivo físico.
+4. Registrarse o iniciar sesión.
+5. Presionar el botón **Nueva nota**.
+6. Ingresar el título, contenido y fecha.
+7. Presionar **Guardar nota**.
+8. Verificar que la nota aparezca en la lista principal.
+9. Tocar una nota para abrir el formulario de edición.
+10. Modificar los datos de la nota.
+11. Presionar **Guardar cambios**.
+12. Verificar que la información actualizada aparezca en la lista.
+13. Mantener presionada una nota para mostrar el diálogo de eliminación.
+14. Presionar **Eliminar** para confirmar la acción.
+15. Verificar que la nota desaparezca de la lista.
+16. Utilizar la opción **Deshacer** para recuperar la nota eliminada.
 
 ---
 
