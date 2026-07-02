@@ -140,3 +140,37 @@ Proyecto académico desarrollado para la asignatura de Desarrollo de Aplicacione
 # Estado del Proyecto
 
 Actualmente el proyecto se encuentra en fase inicial de desarrollo. Se ha implementado el diseño de la pantalla principal y la integración con GitHub para el control de versiones.
+
+---
+
+# Nuevas funcionalidades implementadas
+
+* CRUD completo de notas: crear, visualizar, editar y eliminar.
+* Almacenamiento local de notas mediante Room Database.
+* Visualización de notas mediante RecyclerView.
+* Formulario reutilizable para crear y editar notas.
+* Confirmación antes de eliminar una nota.
+* Opción para deshacer la eliminación mediante Snackbar.
+* Integración de una API REST de frases mediante Retrofit.
+* Conversión de respuestas JSON mediante Gson.
+* Manejo de estados Loading, Success y Error con StateFlow.
+* Implementación de notificaciones locales mediante WorkManager.
+* Solicitud del permiso de notificaciones en Android 13 o superior.
+* Recordatorios relacionados con los datos almacenados en Room.
+
+---
+
+# Arquitectura de datos
+
+La aplicación utiliza una arquitectura organizada por capas para separar la interfaz, la lógica y el acceso a los datos.
+
+```text
+Activity
+   ↓
+ViewModel
+   ↓
+Repository
+   ↓
+DAO
+   ↓
+Room Database
