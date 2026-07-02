@@ -174,3 +174,43 @@ Repository
 DAO
    ↓
 Room Database
+
+---
+
+# Capturas actuales de la aplicación
+
+## Captura 1
+
+![Captura 1](capturas/Captura%20de%20pantalla%202026-07-01%20221633.png)
+
+## Captura 2
+
+![Captura 2](capturas/Captura%20de%20pantalla%202026-07-01%20222151.png)
+
+## Captura 3
+
+![Captura 3](capturas/Captura%20de%20pantalla%202026-07-01%20222331.png)
+
+## Captura 4
+
+![Captura 4](capturas/Captura%20de%20pantalla%202026-07-02%20084343.png)
+
+## Captura 5
+
+![Captura 5](capturas/Captura%20de%20pantalla%202026-07-02%20090940.png)
+
+## Captura 6
+
+![Captura 6](capturas/Captura%20de%20pantalla%202026-07-02%20091103.png)
+
+## Captura 7
+
+![Captura 7](capturas/Captura%20de%20pantalla%202026-07-02%20091227.png)
+
+## Captura 8
+
+![Captura 8](capturas/Captura%20de%20pantalla%202026-07-02%20092818.png)
+
+## Captura 9
+
+![Captura 9](capturas/Captura%20de%20pantalla%202026-07-02%20092856.png)
